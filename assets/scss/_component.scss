@@ -1,5 +1,4 @@
 .container {
-  @include container(1200px);
   margin: 0 auto;
   padding: 0;
 
@@ -81,11 +80,19 @@ h3 {
 @include breakpoint($breakpoint-tablet) {
   .one,
   .three {
-    @include span(4 of 12);
+    @include span(5 of 12);
   }
 
   .two {
-    @include span(8 of 12 last);
+    @include span(7 of 12 last);
+
+    .six {
+      @include span(3 of 6);
+    }
+
+    .seven {
+      @include span(3 of 6 last);
+    }
   }
 
 }
