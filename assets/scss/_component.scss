@@ -1,7 +1,123 @@
-// ====================================================================================================== //
-// MODULES //
-// ====================================================================================================== //
+.container {
+  @include container(1200px);
+  margin: 0 auto;
+  padding: 0;
 
-// ====================================================================================================== //
-// OVERRIDES //
-// ====================================================================================================== //
+  h1 {
+    color: $gray-dark;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-transform: uppercase;
+  }
+}
+
+.block {
+  @include border-radius;
+  text-align: center;
+  margin: 0 0 gutter(10) 0;
+}
+
+h2 {
+  color: $gray-dark;
+  font-weight: 300;
+}
+
+h3 {
+  color: $teal;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven {
+  @include span(12 of 12);
+}
+
+.one,
+.two,
+.three {
+  background-color: $teal-light;
+}
+
+.four,
+.five,
+.six,
+.seven {
+  background-color: $white;
+}
+
+.four,
+.five {
+  h2 {
+    padding-top: 5px;
+  }
+
+  ul {
+    text-align: left;
+    list-style-type: none;
+    margin: gutter(2);
+
+    li {
+      &.highlight {
+        color: #E60061;
+        font-weight: 700;
+      }
+
+      &.intend {
+        margin-left: 13px;
+
+        &.double {
+          margin-left: 26px;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .one,
+  .three {
+    @include span(4 of 12);
+  }
+
+  .two {
+    @include span(8 of 12 last);
+  }
+
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .one {
+    @include span(3 of 12);
+  }
+
+  .two {
+    @include span(6 of 12);
+
+    .four {
+      @include span(3 of 6);
+    }
+
+    .five {
+      @include span(3 of 6 last);
+    }
+
+    .six {
+      @include span(2 of 6);
+      clear: both;
+    }
+
+    .seven {
+      @include span(4 of 6 last);
+    }
+  }
+
+  .three {
+    @include span(3 of 12 last);
+  }
+
+}

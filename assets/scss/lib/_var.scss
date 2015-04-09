@@ -13,6 +13,11 @@ $black-4: rgba($black, .4);
 
 $error: #F00;
 
+$gray-light: #ECECEC;
+$gray-dark: #727272;
+$teal: #5ACAC1;
+$teal-light: #A9D5D1;
+
 // typo
 $rembase: 16;
 $base-font-size: 15px;
@@ -39,5 +44,36 @@ $legacy-support-for-ie6: false !global;
 $legacy-support-for-ie7: true !global;
 $legacy-support-for-ie8: true !global;
 
+//breakpoints
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 1024px;
+
 // susy
 $cols: 12;
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 12,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: show,
+    color: rgba($gray-dark, .25),
+    output: overlay,
+    toggle: top right,
+  ),
+  // use-custom: (
+  //   background-image: true,
+  //   background-options: false,
+  //   box-sizing: true,
+  //   clearfix: false,
+  //   rem: true,
+  // )
+);

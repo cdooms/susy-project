@@ -247,3 +247,8 @@
   text-rendering: auto;
   transform: translate(0, 0);
 }
+
+//custom
+@mixin border-radius {
+  border-radius: 4px;
+}
