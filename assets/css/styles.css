@@ -2757,7 +2757,8 @@ img.file-quarter-width {
 }
 
 .container {
-  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
   padding: 0;
 }
 .container h1 {
@@ -2771,7 +2772,7 @@ img.file-quarter-width {
 .block {
   border-radius: 4px;
   text-align: center;
-  margin: 0 0 2.04082% 0;
+  margin: 0 0 2.04082%;
 }
 
 h2 {
@@ -2789,7 +2790,8 @@ h3 {
 .four,
 .five,
 .six,
-.seven {
+.seven,
+.eight {
   width: 100%;
   float: left;
   margin-left: 0;
@@ -2805,7 +2807,8 @@ h3 {
 .four,
 .five,
 .six,
-.seven {
+.seven,
+.eight {
   background-color: white;
 }
 
@@ -2831,6 +2834,38 @@ h3 {
 .four ul li.intend.double,
 .five ul li.intend.double {
   margin-left: 26px;
+}
+
+.eight .gallery {
+  overflow: hidden;
+  *zoom: 1;
+  list-style-type: none;
+  padding-bottom: 3.44828%;
+}
+.eight .gallery .gallery-item {
+  width: 31.03448%;
+  float: left;
+  padding-top: 3.44828%;
+}
+.eight .gallery .gallery-item:nth-child(3n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+.eight .gallery .gallery-item:nth-child(3n + 2) {
+  margin-left: 34.48276%;
+  margin-right: -100%;
+  clear: none;
+}
+.eight .gallery .gallery-item:nth-child(3n + 3) {
+  margin-left: 68.96552%;
+  margin-right: -100%;
+  clear: none;
+}
+.eight .gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 600px) {
@@ -2889,6 +2924,13 @@ h3 {
     width: 65.51724%;
     float: right;
     margin-right: 0;
+  }
+  .two .eight {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    clear: both;
   }
 
   .three {
